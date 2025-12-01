@@ -1,0 +1,12 @@
+[project]
+name = "student_management"
+version = "1.1.0"
+description = "Student Management System v1.1 (scaffolded package)"
+authors = [{ name = "Yuval Shah" }]
+requires-python = ">=3.10"
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"
