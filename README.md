@@ -114,13 +114,20 @@ It includes all essential operations with basic input validation and GPA logic.
 
 ## 📝 Version History
 
-v1.0
-Initial release with core CRUD features (Add, View, Search, Update, Delete)
+v1.0 <br>
+Initial release with core CRUD features (Add, View, Search, Update, Delete)<br>
 GPA auto-calculation from marks
 
-v1.1 (Current)
-Added custom exception classes for Age, Name, Marks, and Choice
-Implemented input validation for empty fields, negative age, invalid marks, and wrong menu choices
+v1.1 <br>
+Added custom exception classes for Age, Name, Marks, and Choice <br>
+Implemented input validation for empty fields, negative age, invalid marks, and wrong menu choices <br>
 Enhanced stability with error handling in all functions
+
+v1.2 (Current) <br>
+Added sample_students.csv (clean 200-row dataset) <br>
+Added generate_synthetic.py for synthetic data creation <br>
+Added data_ingest.py with load_csv() helper <br>
+Added EDA notebook (notebooks/eda.ipynb) showing distributions, missing values, correlations, and class balance <br>
+Saved visual outputs in results/eda/ for documentation <br>
 
 ---
