@@ -1,3 +1,10 @@
+# Core formatting / testing
 pytest
 black
 isort
+
+# Data & EDA (v1.2)
+pandas
+numpy
+matplotlib
+seaborn

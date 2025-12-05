@@ -1,0 +1,201 @@
+student_id,age,gender,attendance_pct,course_history,assignment_scores,final_grade,notes
+1,23.3,M,59.5,"[""Maths"", ""DSA""]","[55, 82, 87, 74, 45]",F,Weak in theory subjects
+2,21.4,M,75.5,"[""ML"", ""DSA""]","[41, 68, 84, 59, 72]",F,Weak in theory subjects
+3,25.9,F,85.5,"[""AI"", ""Maths""]","[79, 58, 49, 99, 42]",A,Consistent performer
+4,19.4,M,60.4,"[""DBMS"", ""Maths""]","[47, 94, 77, 68, 44]",F,Strong in practicals
+5,22.9,M,51.6,"[""DSA"", ""AI"", ""Maths"", ""ML""]","[92, 91, 43, 64, 85]",C,Excellent attendance
+6,21.7,F,76.7,"[""ML"", ""DBMS"", ""Maths"", ""DSA""]","[41, 86, 42, 64, 89]",B,Strong in practicals
+7,20.4,F,68.5,"[""DSA"", ""Maths"", ""AI"", ""ML"", ""DBMS""]","[61, 66, 73, 89, 41]",B,Excellent attendance
+8,22.3,F,70.2,"[""Maths"", ""DBMS"", ""ML"", ""AI""]","[42, 82, 66, 87, 77]",A,Consistent performer
+9,19.9,F,75.3,"[""Maths"", ""DSA""]","[42, 41, 96, 62, 56]",C,Needs improvement in assignments
+10,22.7,M,72.3,"[""Maths"", ""AI"", ""DBMS"", ""ML""]","[75, 84, 89, 41, 91]",F,Strong in practicals
+11,14.0,M,56.8,"[""DSA"", ""AI""]","[49, 93, 60, 58, 75]",C,Needs improvement in assignments
+12,24.8,M,59.5,"[""ML"", ""Maths""]","[76, 71, 60, 74, 55]",D,Excellent attendance
+13,23.4,F,41.1,"[""Maths"", ""AI"", ""ML"", ""DSA"", ""DBMS""]","[93, 68, 78, 85, 86]",D,Consistent performer
+14,18.6,M,58.2,"[""AI"", ""DBMS"", ""DSA"", ""Maths"", ""ML""]","[91, 45, 72, 99, 72]",A,Consistent performer
+15,19.2,F,84.0,"[""Maths"", ""ML"", ""DBMS"", ""DSA""]","[72, 89, 85, 66, 69]",D,Weak in theory subjects
+16,20.2,F,43.0,"[""DBMS"", ""AI""]","[61, 93, 86, 42, 93]",D,Needs improvement in assignments
+17,21.0,M,76.8,"[""DBMS"", ""AI"", ""Maths"", ""DSA""]","[53, 79, 74, 97, 86]",C,Weak in theory subjects
+18,22.7,F,43.6,"[""AI"", ""DSA""]","[43, 95, 99, 90, 98]",F,Consistent performer
+19,17.2,M,66.7,"[""Maths"", ""ML"", ""DSA"", ""DBMS""]","[81, 45, 92, 97, 54]",B,Weak in theory subjects
+20,24.2,M,90.5,"[""DBMS"", ""AI"", ""Maths"", ""ML""]","[57, 44, 87, 99, 60]",C,Strong in practicals
+21,25.0,F,56.9,"[""Maths"", ""AI"", ""DBMS"", ""DSA"", ""ML""]","[47, 48, 71, 54, 69]",D,Consistent performer
+22,16.9,F,40.6,"[""ML"", ""DSA"", ""Maths"", ""AI"", ""DBMS""]","[64, 47, 64, 44, 41]",B,Weak in theory subjects
+23,24.5,F,53.9,"[""ML"", ""Maths"", ""DBMS"", ""AI"", ""DSA""]","[90, 45, 82, 87, 66]",B,Needs improvement in assignments
+24,21.3,F,96.7,"[""Maths"", ""DBMS"", ""DSA""]","[73, 62, 48, 78, 63]",A,Needs improvement in assignments
+25,22.2,F,51.1,"[""Maths"", ""DSA"", ""DBMS"", ""AI"", ""ML""]","[89, 90, 68, 45, 51]",A,Strong in practicals
+26,25.1,M,77.4,"[""ML"", ""DSA"", ""Maths"", ""AI"", ""DBMS""]","[64, 48, 56, 100, 74]",C,
+27,16.8,M,44.0,"[""Maths"", ""DSA"", ""ML"", ""AI"", ""DBMS""]","[72, 79, 56, 54, 61]",C,Excellent attendance
+28,21.1,F,58.2,"[""DSA"", ""ML"", ""Maths""]","[42, 57, 61, 53, 48]",A,Excellent attendance
+29,17.7,M,56.9,"[""DBMS"", ""ML"", ""AI"", ""DSA""]","[50, 64, 66, 65, 94]",A,Needs improvement in assignments
+30,20.7,F,56.5,"[""ML"", ""AI"", ""Maths"", ""DBMS""]","[62, 71, 99, 64, 100]",D,Weak in theory subjects
+31,19.3,M,45.7,"[""Maths"", ""ML"", ""AI"", ""DSA""]","[60, 69, 91, 79, 96]",F,Excellent attendance
+32,20.8,F,77.2,"[""DBMS"", ""AI""]","[72, 90, 58, 73, 86]",C,Weak in theory subjects
+33,20.9,F,67.0,"[""DSA"", ""DBMS"", ""AI"", ""Maths""]","[60, 90, 49, 53, 86]",B,Needs improvement in assignments
+34,25.9,M,44.9,"[""AI"", ""DBMS"", ""DSA""]","[72, 71, 42, 91, 49]",D,Weak in theory subjects
+35,19.8,F,89.1,"[""Maths"", ""AI"", ""DBMS""]","[98, 99, 92, 43, 84]",B,
+36,17.2,M,91.3,"[""DBMS"", ""Maths"", ""ML"", ""DSA""]","[71, 79, 66, 92, 61]",F,Needs improvement in assignments
+37,23.7,F,47.0,"[""DSA"", ""AI"", ""DBMS""]","[46, 70, 42, 90, 45]",B,Weak in theory subjects
+38,18.1,F,74.0,"[""Maths"", ""ML"", ""AI""]","[66, 88, 76, 98, 65]",F,Strong in practicals
+39,23.9,M,41.2,"[""AI"", ""DSA"", ""DBMS""]","[69, 94, 77, 75, 90]",B,Weak in theory subjects
+40,21.1,F,78.4,"[""DSA"", ""DBMS"", ""Maths"", ""AI"", ""ML""]","[82, 52, 67, 79, 62]",C,
+41,22.4,F,99.9,"[""AI"", ""Maths"", ""ML"", ""DBMS""]","[87, 50, 75, 49, 46]",F,
+42,24.2,F,52.6,"[""DBMS"", ""AI"", ""DSA"", ""ML"", ""Maths""]","[67, 52, 90, 72, 67]",B,
+43,28.6,M,95.3,"[""AI"", ""Maths"", ""DBMS"", ""DSA"", ""ML""]","[61, 93, 51, 70, 53]",F,Needs improvement in assignments
+44,21.3,F,47.9,"[""ML"", ""DSA""]","[72, 99, 62, 59, 41]",D,Weak in theory subjects
+45,16.5,M,55.8,"[""AI"", ""DSA"", ""Maths"", ""DBMS"", ""ML""]","[67, 60, 60, 79, 98]",B,Excellent attendance
+46,21.5,F,80.9,"[""AI"", ""DSA"", ""Maths"", ""ML"", ""DBMS""]","[98, 58, 74, 68, 62]",B,Needs improvement in assignments
+47,18.0,F,40.1,"[""AI"", ""DSA"", ""DBMS"", ""Maths"", ""ML""]","[72, 99, 76, 64, 50]",F,Consistent performer
+48,18.5,F,72.7,"[""Maths"", ""DSA"", ""AI"", ""ML""]","[90, 93, 61, 56, 84]",D,Strong in practicals
+49,20.5,M,51.7,"[""DBMS"", ""DSA""]","[73, 99, 97, 81, 48]",B,Excellent attendance
+50,20.6,M,63.3,"[""Maths"", ""DSA"", ""DBMS"", ""AI"", ""ML""]","[89, 48, 70, 63, 44]",C,Strong in practicals
+51,16.5,F,57.0,"[""DBMS"", ""DSA"", ""ML""]","[93, 83, 100, 75, 88]",C,Excellent attendance
+52,21.3,M,59.9,"[""AI"", ""Maths""]","[99, 46, 81, 75, 87]",F,Needs improvement in assignments
+53,25.6,F,79.4,"[""DBMS"", ""ML"", ""DSA"", ""Maths""]","[57, 58, 67, 64, 86]",C,Consistent performer
+54,21.8,F,70.8,"[""DBMS"", ""AI""]","[95, 99, 46, 44, 65]",D,Weak in theory subjects
+55,20.5,F,58.1,"[""DBMS"", ""Maths"", ""AI"", ""ML"", ""DSA""]","[59, 83, 94, 83, 71]",D,Consistent performer
+56,24.4,M,58.5,"[""AI"", ""DBMS"", ""DSA"", ""Maths""]","[52, 46, 55, 95, 56]",A,Consistent performer
+57,22.1,M,98.7,"[""ML"", ""DBMS"", ""Maths"", ""DSA"", ""AI""]","[96, 59, 99, 70, 55]",F,Needs improvement in assignments
+58,21.8,F,51.9,"[""AI"", ""DBMS"", ""DSA"", ""ML""]","[91, 64, 60, 41, 62]",B,
+59,25.2,M,76.3,"[""Maths"", ""DSA""]","[86, 58, 72, 56, 47]",B,Excellent attendance
+60,25.1,M,72.1,"[""ML"", ""Maths"", ""AI""]","[80, 69, 88, 95, 75]",D,Excellent attendance
+61,19.5,M,47.4,"[""DBMS"", ""DSA"", ""Maths""]","[43, 87, 65, 94, 59]",C,Excellent attendance
+62,19.5,M,46.5,"[""Maths"", ""AI"", ""DSA"", ""ML""]","[53, 80, 61, 53, 43]",C,Consistent performer
+63,21.5,F,96.2,"[""DBMS"", ""AI"", ""Maths"", ""ML"", ""DSA""]","[65, 49, 67, 65, 60]",A,Excellent attendance
+64,23.1,F,80.7,"[""DBMS"", ""Maths"", ""AI"", ""ML"", ""DSA""]","[45, 47, 88, 56, 79]",C,Excellent attendance
+65,21.0,M,91.1,"[""Maths"", ""AI"", ""ML""]","[44, 52, 98, 46, 98]",D,Strong in practicals
+66,17.3,M,96.8,"[""DSA"", ""AI"", ""ML"", ""Maths""]","[80, 84, 67, 46, 74]",B,Consistent performer
+67,21.0,M,58.7,"[""DSA"", ""Maths"", ""AI""]","[88, 74, 40, 91, 49]",B,Strong in practicals
+68,16.7,F,85.3,"[""AI"", ""DSA"", ""Maths"", ""DBMS""]","[98, 45, 75, 98, 67]",B,Strong in practicals
+69,22.3,F,42.3,"[""Maths"", ""AI"", ""ML"", ""DSA""]","[77, 100, 96, 78, 81]",F,Needs improvement in assignments
+70,15.9,M,99.0,"[""AI"", ""DSA"", ""DBMS"", ""ML"", ""Maths""]","[92, 78, 48, 52, 56]",C,Needs improvement in assignments
+71,22.7,M,63.7,"[""ML"", ""AI"", ""Maths"", ""DBMS""]","[63, 64, 40, 58, 53]",A,
+72,17.9,M,78.9,"[""ML"", ""DBMS"", ""Maths"", ""AI""]","[100, 47, 85, 71, 58]",C,Consistent performer
+73,21.4,M,49.0,"[""DBMS"", ""Maths"", ""AI"", ""DSA""]","[56, 71, 41, 65, 50]",A,Weak in theory subjects
+74,24.9,F,49.1,"[""Maths"", ""DSA"", ""AI"", ""DBMS""]","[54, 73, 46, 85, 62]",B,Strong in practicals
+75,22.2,F,72.1,"[""AI"", ""Maths"", ""DSA"", ""DBMS"", ""ML""]","[67, 40, 73, 95, 75]",C,Excellent attendance
+76,21.9,F,66.6,"[""Maths"", ""AI"", ""DBMS"", ""DSA""]","[66, 56, 76, 41, 71]",B,Weak in theory subjects
+77,26.6,M,83.8,"[""DSA"", ""AI"", ""DBMS"", ""ML""]","[66, 40, 72, 82, 83]",C,Excellent attendance
+78,17.7,M,67.2,"[""Maths"", ""DSA"", ""AI"", ""ML"", ""DBMS""]","[63, 86, 55, 88, 93]",A,Weak in theory subjects
+79,15.3,F,88.1,"[""ML"", ""DSA"", ""AI"", ""DBMS"", ""Maths""]","[61, 68, 86, 79, 59]",D,Excellent attendance
+80,23.9,F,64.1,"[""DSA"", ""AI"", ""ML""]","[96, 61, 88, 62, 52]",D,Strong in practicals
+81,18.5,F,57.4,"[""DBMS"", ""AI"", ""DSA"", ""ML"", ""Maths""]","[78, 85, 82, 77, 93]",C,Needs improvement in assignments
+82,23.6,F,93.6,"[""Maths"", ""ML"", ""DSA""]","[90, 40, 60, 96, 73]",F,Strong in practicals
+83,19.1,M,56.4,"[""AI"", ""Maths"", ""DSA"", ""DBMS"", ""ML""]","[46, 76, 71, 97, 57]",F,Weak in theory subjects
+84,20.8,M,77.9,"[""Maths"", ""DSA"", ""AI"", ""ML"", ""DBMS""]","[77, 67, 74, 50, 87]",C,Needs improvement in assignments
+85,17.6,F,78.9,"[""DBMS"", ""Maths"", ""DSA"", ""AI""]","[58, 48, 59, 54, 74]",D,
+86,16.6,F,42.8,"[""Maths"", ""AI""]","[44, 45, 64, 89, 91]",B,Strong in practicals
+87,26.1,F,91.7,"[""ML"", ""AI"", ""DBMS""]","[93, 76, 97, 57, 74]",C,Needs improvement in assignments
+88,16.5,F,78.0,"[""AI"", ""DSA"", ""DBMS"", ""ML""]","[73, 93, 60, 68, 65]",B,Strong in practicals
+89,17.8,M,47.6,"[""DSA"", ""DBMS"", ""Maths"", ""AI""]","[90, 72, 93, 69, 89]",F,Consistent performer
+90,16.9,M,53.7,"[""Maths"", ""AI"", ""DSA"", ""ML""]","[60, 60, 58, 79, 83]",F,Needs improvement in assignments
+91,22.0,F,86.4,"[""ML"", ""DSA"", ""DBMS"", ""Maths""]","[73, 89, 78, 95, 91]",D,Needs improvement in assignments
+92,22.8,F,58.1,"[""AI"", ""Maths"", ""DBMS"", ""ML""]","[61, 41, 85, 71, 49]",C,Weak in theory subjects
+93,23.2,M,61.4,"[""AI"", ""DBMS"", ""ML""]","[97, 72, 78, 56, 91]",C,Strong in practicals
+94,21.9,F,64.7,"[""DBMS"", ""DSA"", ""AI"", ""ML""]","[75, 41, 51, 77, 45]",F,Weak in theory subjects
+95,24.3,M,70.0,"[""AI"", ""DSA"", ""ML"", ""Maths"", ""DBMS""]","[93, 48, 98, 84, 98]",C,Weak in theory subjects
+96,23.0,M,98.8,"[""Maths"", ""AI"", ""DBMS""]","[79, 76, 75, 87, 40]",D,Excellent attendance
+97,22.9,F,66.9,"[""AI"", ""ML"", ""DSA"", ""Maths"", ""DBMS""]","[67, 63, 92, 77, 69]",A,
+98,23.1,M,64.8,"[""AI"", ""Maths""]","[50, 90, 53, 93, 49]",A,
+99,23.1,M,68.8,"[""DBMS"", ""Maths"", ""ML"", ""AI""]","[65, 50, 59, 62, 72]",F,Strong in practicals
+100,17.1,F,78.8,"[""DSA"", ""ML""]","[77, 70, 55, 55, 60]",D,Strong in practicals
+101,19.1,M,99.4,"[""AI"", ""DSA"", ""DBMS""]","[53, 44, 95, 97, 53]",F,Excellent attendance
+102,19.6,F,69.5,"[""AI"", ""ML"", ""DSA"", ""DBMS"", ""Maths""]","[86, 65, 93, 47, 57]",A,Weak in theory subjects
+103,17.6,M,80.0,"[""ML"", ""AI"", ""DSA""]","[68, 73, 80, 92, 94]",A,Strong in practicals
+104,21.0,M,56.0,"[""ML"", ""DBMS"", ""Maths""]","[58, 97, 90, 42, 81]",D,Strong in practicals
+105,20.7,M,81.5,"[""DBMS"", ""AI"", ""DSA""]","[94, 91, 54, 46, 55]",B,Excellent attendance
+106,21.2,M,84.5,"[""AI"", ""DSA"", ""DBMS"", ""ML"", ""Maths""]","[61, 98, 88, 49, 69]",A,Weak in theory subjects
+107,22.7,M,41.0,"[""DSA"", ""DBMS""]","[76, 45, 43, 84, 74]",A,Needs improvement in assignments
+108,24.4,F,40.5,"[""ML"", ""DBMS"", ""Maths"", ""DSA"", ""AI""]","[70, 84, 64, 63, 58]",F,
+109,26.5,F,87.0,"[""DSA"", ""ML"", ""DBMS""]","[66, 80, 59, 57, 42]",A,Strong in practicals
+110,22.6,F,90.7,"[""DSA"", ""ML""]","[99, 99, 74, 72, 95]",A,Needs improvement in assignments
+111,20.7,F,59.9,"[""DSA"", ""DBMS"", ""AI"", ""Maths""]","[52, 96, 86, 81, 47]",B,Consistent performer
+112,18.2,F,70.0,"[""Maths"", ""DBMS"", ""DSA"", ""AI"", ""ML""]","[65, 80, 78, 81, 79]",D,
+113,18.6,M,86.0,"[""Maths"", ""AI""]","[62, 49, 78, 79, 71]",B,Needs improvement in assignments
+114,25.6,F,82.5,"[""DSA"", ""ML"", ""AI"", ""DBMS""]","[85, 69, 63, 58, 66]",F,Needs improvement in assignments
+115,16.1,M,91.4,"[""DBMS"", ""ML"", ""Maths"", ""DSA"", ""AI""]","[78, 97, 93, 48, 56]",D,Needs improvement in assignments
+116,17.9,M,67.3,"[""Maths"", ""DSA"", ""DBMS""]","[60, 61, 67, 58, 94]",D,
+117,19.3,M,58.4,"[""AI"", ""DSA"", ""ML""]","[99, 66, 70, 94, 90]",F,Consistent performer
+118,17.8,F,75.2,"[""ML"", ""DBMS"", ""Maths"", ""DSA""]","[48, 82, 51, 65, 63]",B,Needs improvement in assignments
+119,22.2,M,90.9,"[""Maths"", ""ML"", ""DSA"", ""AI"", ""DBMS""]","[40, 69, 51, 82, 67]",D,Needs improvement in assignments
+120,23.9,M,67.2,"[""DBMS"", ""ML"", ""Maths""]","[83, 92, 67, 97, 61]",B,Weak in theory subjects
+121,16.1,F,81.7,"[""ML"", ""DSA"", ""AI"", ""Maths""]","[75, 72, 85, 86, 46]",A,Needs improvement in assignments
+122,21.3,F,85.5,"[""ML"", ""DBMS"", ""AI"", ""DSA"", ""Maths""]","[69, 88, 58, 89, 68]",C,Strong in practicals
+123,14.4,M,99.6,"[""DBMS"", ""ML"", ""AI"", ""Maths""]","[64, 40, 98, 44, 91]",A,Strong in practicals
+124,21.7,M,62.1,"[""DBMS"", ""ML"", ""AI"", ""Maths"", ""DSA""]","[83, 98, 68, 57, 63]",C,Excellent attendance
+125,23.9,M,65.5,"[""Maths"", ""DBMS"", ""DSA"", ""ML""]","[64, 41, 60, 75, 65]",D,Needs improvement in assignments
+126,17.1,M,58.7,"[""DBMS"", ""DSA"", ""Maths"", ""ML""]","[52, 59, 69, 71, 61]",B,Strong in practicals
+127,18.8,M,90.9,"[""AI"", ""Maths"", ""DSA"", ""DBMS""]","[72, 91, 73, 76, 42]",A,Weak in theory subjects
+128,18.8,F,40.6,"[""AI"", ""ML"", ""Maths"", ""DSA""]","[78, 56, 78, 75, 98]",C,Excellent attendance
+129,17.0,M,75.5,"[""DSA"", ""ML"", ""DBMS""]","[96, 83, 52, 96, 66]",F,Consistent performer
+130,19.1,F,77.9,"[""Maths"", ""DSA"", ""AI"", ""DBMS""]","[84, 53, 48, 64, 87]",A,Consistent performer
+131,18.4,F,78.3,"[""AI"", ""DSA"", ""DBMS"", ""ML"", ""Maths""]","[64, 80, 46, 72, 87]",F,Strong in practicals
+132,22.5,M,68.2,"[""ML"", ""DSA"", ""DBMS""]","[92, 79, 55, 90, 42]",B,Weak in theory subjects
+133,19.0,M,64.1,"[""Maths"", ""AI""]","[85, 82, 55, 90, 40]",A,Strong in practicals
+134,24.0,F,61.5,"[""DBMS"", ""Maths"", ""AI"", ""ML""]","[82, 70, 52, 66, 97]",B,Consistent performer
+135,17.6,M,62.8,"[""AI"", ""DBMS"", ""DSA"", ""ML""]","[83, 48, 58, 47, 61]",F,Needs improvement in assignments
+136,19.0,M,74.2,"[""DBMS"", ""AI""]","[92, 89, 96, 54, 73]",B,Consistent performer
+137,23.4,M,97.6,"[""Maths"", ""DBMS""]","[40, 90, 41, 45, 78]",F,Consistent performer
+138,23.1,M,88.2,"[""AI"", ""Maths"", ""DSA""]","[41, 72, 84, 68, 53]",B,Strong in practicals
+139,18.3,M,91.9,"[""Maths"", ""ML"", ""AI"", ""DBMS"", ""DSA""]","[97, 63, 42, 96, 90]",F,Weak in theory subjects
+140,16.2,M,70.0,"[""DSA"", ""AI"", ""DBMS"", ""Maths""]","[91, 88, 46, 46, 79]",C,Strong in practicals
+141,25.3,F,48.6,"[""AI"", ""Maths"", ""ML"", ""DBMS""]","[97, 71, 78, 44, 49]",C,Consistent performer
+142,21.6,M,92.8,"[""DBMS"", ""Maths"", ""DSA"", ""AI""]","[94, 71, 97, 86, 99]",F,Consistent performer
+143,19.4,M,87.4,"[""DSA"", ""Maths"", ""ML""]","[50, 47, 41, 92, 100]",F,Excellent attendance
+144,24.1,F,91.4,"[""DBMS"", ""AI""]","[40, 48, 57, 40, 79]",A,Needs improvement in assignments
+145,23.8,F,81.1,"[""DSA"", ""AI"", ""Maths"", ""ML"", ""DBMS""]","[66, 41, 62, 56, 77]",F,
+146,25.2,M,72.3,"[""DSA"", ""DBMS"", ""ML"", ""AI"", ""Maths""]","[48, 89, 51, 75, 69]",F,
+147,23.7,M,42.0,"[""ML"", ""AI"", ""Maths""]","[52, 65, 69, 61, 84]",C,
+148,18.7,M,83.7,"[""ML"", ""Maths"", ""AI"", ""DBMS""]","[51, 95, 56, 100, 51]",A,Strong in practicals
+149,19.0,M,76.6,"[""ML"", ""Maths"", ""DBMS"", ""DSA"", ""AI""]","[81, 98, 73, 56, 55]",B,Weak in theory subjects
+150,21.4,M,61.7,"[""DBMS"", ""DSA"", ""Maths"", ""ML""]","[65, 79, 95, 63, 64]",B,Consistent performer
+151,21.2,F,41.9,"[""ML"", ""DBMS""]","[67, 93, 79, 78, 44]",A,Excellent attendance
+152,27.2,F,63.5,"[""DSA"", ""AI""]","[41, 56, 82, 83, 91]",F,Strong in practicals
+153,21.1,M,76.3,"[""ML"", ""DSA"", ""DBMS""]","[41, 67, 59, 83, 84]",D,Strong in practicals
+154,21.1,M,90.2,"[""AI"", ""Maths"", ""DBMS"", ""ML"", ""DSA""]","[78, 87, 45, 90, 44]",B,Needs improvement in assignments
+155,21.1,M,72.7,"[""ML"", ""DBMS"", ""Maths""]","[41, 84, 63, 99, 82]",C,Weak in theory subjects
+156,24.1,F,90.9,"[""ML"", ""DSA""]","[51, 71, 88, 51, 42]",D,
+157,27.6,M,93.5,"[""DBMS"", ""AI"", ""ML"", ""Maths""]","[85, 63, 40, 42, 68]",F,Excellent attendance
+158,20.9,F,96.0,"[""ML"", ""AI"", ""DSA"", ""DBMS""]","[73, 66, 85, 94, 50]",D,Strong in practicals
+159,20.9,M,75.0,"[""ML"", ""AI"", ""DSA"", ""Maths"", ""DBMS""]","[89, 93, 63, 63, 55]",D,Weak in theory subjects
+160,17.7,M,81.1,"[""Maths"", ""DSA""]","[99, 73, 70, 59, 65]",A,Needs improvement in assignments
+161,25.2,F,77.9,"[""DSA"", ""ML"", ""AI"", ""DBMS"", ""Maths""]","[57, 76, 84, 89, 85]",F,Weak in theory subjects
+162,21.7,M,46.4,"[""ML"", ""DSA"", ""AI"", ""DBMS"", ""Maths""]","[65, 97, 54, 95, 53]",F,Excellent attendance
+163,14.1,F,93.6,"[""DSA"", ""ML"", ""Maths""]","[45, 65, 68, 71, 42]",B,Weak in theory subjects
+164,25.5,F,94.4,"[""DSA"", ""Maths"", ""ML""]","[70, 97, 97, 76, 69]",F,
+165,20.7,F,50.2,"[""AI"", ""DBMS"", ""DSA"", ""ML"", ""Maths""]","[74, 66, 84, 49, 54]",D,Strong in practicals
+166,20.9,F,61.9,"[""DBMS"", ""Maths"", ""ML"", ""DSA""]","[40, 67, 91, 46, 81]",D,Excellent attendance
+167,16.6,M,42.4,"[""Maths"", ""ML"", ""AI"", ""DBMS""]","[67, 64, 70, 48, 78]",D,Weak in theory subjects
+168,20.3,M,74.3,"[""DSA"", ""ML"", ""DBMS"", ""Maths""]","[86, 71, 58, 70, 81]",C,Excellent attendance
+169,18.6,M,46.5,"[""DBMS"", ""AI""]","[87, 61, 61, 86, 54]",F,Weak in theory subjects
+170,21.2,F,80.6,"[""DBMS"", ""Maths""]","[79, 96, 46, 66, 63]",D,Excellent attendance
+171,20.1,M,55.1,"[""DBMS"", ""ML"", ""AI"", ""Maths""]","[86, 41, 67, 42, 72]",C,Excellent attendance
+172,21.2,F,53.0,"[""ML"", ""Maths"", ""AI""]","[51, 49, 55, 40, 58]",A,Strong in practicals
+173,15.5,M,68.6,"[""DBMS"", ""AI""]","[81, 70, 87, 99, 98]",B,Weak in theory subjects
+174,19.4,F,73.8,"[""ML"", ""AI"", ""Maths""]","[95, 96, 51, 94, 86]",B,Strong in practicals
+175,19.0,F,93.4,"[""DSA"", ""AI"", ""Maths""]","[62, 93, 54, 85, 87]",D,Strong in practicals
+176,16.4,M,96.8,"[""DBMS"", ""AI"", ""Maths"", ""DSA""]","[44, 71, 62, 70, 85]",D,Consistent performer
+177,19.3,F,61.2,"[""ML"", ""AI"", ""DSA"", ""DBMS""]","[78, 45, 78, 90, 81]",D,Needs improvement in assignments
+178,20.6,F,84.5,"[""ML"", ""Maths"", ""DSA""]","[59, 63, 70, 50, 90]",A,Weak in theory subjects
+179,18.6,M,56.0,"[""ML"", ""DBMS"", ""AI"", ""DSA"", ""Maths""]","[77, 60, 89, 83, 81]",A,Weak in theory subjects
+180,22.1,F,72.3,"[""DSA"", ""ML"", ""AI"", ""DBMS"", ""Maths""]","[78, 73, 94, 55, 70]",A,Consistent performer
+181,21.5,F,54.7,"[""ML"", ""DSA""]","[55, 48, 92, 94, 61]",B,Strong in practicals
+182,24.4,F,91.7,"[""ML"", ""DBMS"", ""Maths""]","[43, 85, 90, 78, 85]",F,Consistent performer
+183,17.3,M,87.1,"[""AI"", ""DBMS"", ""Maths""]","[45, 46, 88, 75, 91]",A,Weak in theory subjects
+184,21.2,F,61.3,"[""Maths"", ""ML"", ""DSA"", ""DBMS""]","[91, 63, 82, 52, 58]",C,Weak in theory subjects
+185,16.9,F,80.3,"[""Maths"", ""ML"", ""DBMS"", ""DSA""]","[58, 85, 73, 97, 81]",B,Strong in practicals
+186,21.0,F,45.7,"[""DSA"", ""DBMS"", ""Maths"", ""ML""]","[45, 91, 76, 98, 98]",C,Needs improvement in assignments
+187,21.1,F,61.2,"[""AI"", ""DBMS"", ""ML""]","[86, 43, 96, 95, 88]",A,Needs improvement in assignments
+188,21.7,F,57.2,"[""DBMS"", ""AI""]","[56, 97, 62, 52, 79]",D,Consistent performer
+189,19.9,F,64.3,"[""DSA"", ""AI"", ""DBMS""]","[75, 54, 87, 88, 45]",B,Excellent attendance
+190,20.2,M,97.4,"[""DSA"", ""ML"", ""AI"", ""Maths"", ""DBMS""]","[67, 89, 42, 63, 69]",B,Consistent performer
+191,20.3,F,84.7,"[""ML"", ""DBMS""]","[55, 71, 78, 58, 80]",A,Needs improvement in assignments
+192,23.8,M,46.1,"[""AI"", ""ML"", ""DBMS"", ""Maths"", ""DSA""]","[72, 42, 59, 82, 70]",C,Consistent performer
+193,26.1,F,82.4,"[""DBMS"", ""ML"", ""AI""]","[76, 57, 80, 90, 53]",D,Excellent attendance
+194,21.8,F,97.0,"[""DSA"", ""Maths"", ""ML"", ""AI"", ""DBMS""]","[46, 53, 67, 68, 86]",C,Strong in practicals
+195,20.4,F,95.8,"[""DBMS"", ""ML""]","[67, 42, 93, 53, 59]",D,Excellent attendance
+196,21.7,F,67.4,"[""Maths"", ""DSA"", ""ML""]","[77, 99, 95, 65, 50]",B,Excellent attendance
+197,18.6,F,72.5,"[""DSA"", ""AI"", ""ML"", ""Maths"", ""DBMS""]","[61, 82, 46, 44, 41]",B,Excellent attendance
+198,19.4,M,89.9,"[""AI"", ""Maths"", ""DBMS"", ""ML""]","[75, 94, 96, 55, 53]",B,Strong in practicals
+199,22.1,F,97.8,"[""AI"", ""DSA"", ""DBMS""]","[66, 45, 90, 61, 88]",F,Needs improvement in assignments
+200,21.2,M,84.8,"[""AI"", ""DBMS""]","[96, 46, 70, 52, 77]",F,Weak in theory subjects
