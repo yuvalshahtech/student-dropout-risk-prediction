@@ -8,3 +8,7 @@ pandas
 numpy
 matplotlib
 seaborn
+
+# Machine Learning (v1.3)
+scikit-learn
+joblib
