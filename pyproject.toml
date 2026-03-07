@@ -1,12 +1,22 @@
 [project]
 name = "student_management"
-version = "1.3"
-description = "Student Management System v1.1 (scaffolded package)"
+version = "1.6.0"
+description = "AI/ML-enabled Student Dropout Risk Prediction and CLI/Streamlit demo system"
 authors = [{ name = "Yuval Shah" }]
 requires-python = ">=3.10"
+readme = "README.md"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
 
 [tool.black]
 line-length = 88
+target-version = ["py310", "py311", "py312"]
 
 [tool.isort]
 profile = "black"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

@@ -1,14 +1,22 @@
-# Core formatting / testing
+# Core ML/Data
+numpy
+pandas
+scikit-learn
+joblib
+xgboost
+shap
+
+# Visualization and notebooks
+matplotlib
+seaborn
+jupyter
+
+# App / serving
+streamlit
+
+# Dev / quality
 pytest
 black
 isort
-
-# Data & EDA (v1.2)
-pandas
-numpy
-matplotlib
-seaborn
-
-# Machine Learning (v1.3)
-scikit-learn
-joblib
+flake8
+pre-commit
