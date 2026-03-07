@@ -1,126 +1,131 @@
-# 🔷 Student Management System
-🎓 Track • Update • Manage
+# Student Management System (AI/ML Showcase)
 
-A console-based Python project to manage student records — using basic logic, loops, and functions. This is a Python-based Student Management System that allows users to efficiently add, view, search, update, and delete student records — with auto GPA calculation based on marks.
+An interview-ready portfolio project for student dropout risk prediction using machine learning, explainability, and a Streamlit demo app.
 
-> Poster Logic → Functional Flow  
-> All core features are reflected visually through a sci-fi HUD-inspired interface:  
-> Add Student • Update Marks • GPA Auto-Calculation • Live Search • View All
+## What This Project Demonstrates
 
----
+- End-to-end ML workflow: data ingestion, feature engineering, training, evaluation
+- Multiple model families: Logistic Regression, Random Forest, XGBoost
+- Explainability with SHAP (global and per-student insights)
+- User-facing interfaces:
+  - CLI flow for structured data entry and local CSV persistence
+  - Streamlit app for interactive prediction and explanation
 
-## 🚀 Features
+## Current Version
 
-- Add Student  
-  - Input Name, Age, Subject, Marks  
-  - GPA is calculated automatically (Marks ÷ 10)
+`v1.6.0`
 
-- View All Students  
-  - Lists all saved students with details
+Completed milestones:
+- `v1.1`: package scaffold and tooling
+- `v1.2`: Kaggle dataset integration and EDA
+- `v1.3`: baseline and tuned ML models
+- `v1.4`: explainability and experiments
+- `v1.5`: Streamlit + CLI data workflows
+- `v1.6`: interview polish artifacts and test coverage
 
-- Search Student  
-  - Lookup by name and view full profile
+## Project Structure
 
-- Update Marks  
-  - Modify marks and refresh GPA
-
-- Delete Student  
-  - Remove a student record safely with confirmation
-
-- Live Validations  
-  - For marks, age, menu choices, and empty fields
-
----
-
-## 🧠 Technologies Used
-
-- Language: Python 3  
-- Concepts: Functions, Lists, Dictionaries, Input Validation, Loops, Conditional Logic  
-- Design: Terminal-based logic + HUD-inspired poster
-
----
-
-## 🖼️ Poster Preview
-
-![SMS HUD Poster](student-management-v1.png)
-
----
-
-## 💡 How to Run
-
-1. Clone the repo or download the Python file  
-2. Run it using:  
-   `python student_management_v1.py`  
-3. Follow the on-screen menu options
-
----
-
-## ⚠️ Note on Data Storage
-
-This version does **not** save data permanently.  
-All student records are stored in memory only during runtime.  
-Once the program ends, the data is lost.  
-This is intentional for educational/demo purposes.
-
----
-
-## 📋 Sample Output
-
-```
-1. Add New Student
-2. View All Students
-3. Search Student by Name
-4. Update Student Marks
-5. Delete Student
-6. Exit
-Enter your choice: 1
-Enter your name: Yashodhan
-Enter your age: 19
-Enter subject name: Python Programming
-Enter your marks in Python Programming: 92
-
-1. Add New Student
-2. View All Students
-3. Search Student by Name
-4. Update Student Marks
-5. Delete Student
-6. Exit
-Enter your choice: 2
-
-------Student 1------
-Name: Yashodhan
-Age: 19
-Subject: Python Programming
-Marks: 92
-GPA: 9.2
----------------------
+```text
+student-management-system/
+├── student_management/
+│   ├── __init__.py
+│   ├── __main__.py
+│   ├── cli.py
+│   ├── core.py
+│   ├── data_ingest.py
+│   ├── features.py
+│   ├── training.py
+│   └── evaluate.py
+├── data/
+│   ├── sample_students.csv
+│   ├── feedback_data.csv
+│   └── cli_data.csv
+├── models/
+├── notebooks/
+├── results/
+│   └── MODEL_METRICS.json
+├── scripts/
+│   └── run_demo.ps1
+└── tests/
+    ├── test_smoke.py
+    └── test_training.py
 ```
 
----
+## Quick Start
 
-## 🧑‍💻 Developer
+### 1. Create and activate virtual environment
 
-Yuval Shah
-GitHub & LinkedIn: [@yuvalshahtech](https://github.com/yuvalshahtech)
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
 
----
+### 2. Install dependencies
 
-## 🧭 System Purpose
+```powershell
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
 
-This system is built to help users manage student records through a terminal interface.  
-It includes all essential operations with basic input validation and GPA logic.
+### 3. Run the CLI app
 
----
+```powershell
+python -m student_management
+```
 
-## 📝 Version History
+### 4. Run the Streamlit demo
 
-v1.0
-Initial release with core CRUD features (Add, View, Search, Update, Delete)
-GPA auto-calculation from marks
+```powershell
+streamlit run streamlit_app.py
+```
 
-v1.1 (Current)
-Added custom exception classes for Age, Name, Marks, and Choice
-Implemented input validation for empty fields, negative age, invalid marks, and wrong menu choices
-Enhanced stability with error handling in all functions
+Or use the helper script:
 
----
+```powershell
+.\scripts\run_demo.ps1
+```
+
+## Training and Evaluation
+
+Train models:
+
+```powershell
+python -m student_management.training
+```
+
+Evaluate a saved model directory:
+
+```powershell
+python -c "from student_management.evaluate import evaluate_model; evaluate_model('models/logistic_tuned')"
+```
+
+## Tests and Quality
+
+Run smoke tests:
+
+```powershell
+pytest tests/test_smoke.py -q
+```
+
+Run training pipeline tests:
+
+```powershell
+pytest tests/test_training.py -q
+```
+
+Run formatting/lint hooks:
+
+```powershell
+pre-commit run --all-files
+```
+
+## Key Artifacts
+
+- Demo walkthrough: `demo.md`
+- One-page summary: `PROJECT_SUMMARY.md`
+- Artifact inventory and model metrics: `results/MODEL_METRICS.json`
+
+## Author
+
+Yuval Shah  
+GitHub: `@yuvalshahtech`

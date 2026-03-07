@@ -1,0 +1,22 @@
+# Core ML/Data
+numpy
+pandas
+scikit-learn
+joblib
+xgboost
+shap
+
+# Visualization and notebooks
+matplotlib
+seaborn
+jupyter
+
+# App / serving
+streamlit
+
+# Dev / quality
+pytest
+black
+isort
+flake8
+pre-commit
