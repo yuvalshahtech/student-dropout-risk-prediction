@@ -1,0 +1,3 @@
+Age,GPA,CGPA,Semester_GPA,Study_Hours_per_Day,Assignment_Delay_Days,Attendance_Rate,Travel_Time_Minutes,Family_Income,Internet_Access,Scholarship,Part_Time_Job,Stress_Index,Semester,Department,Parental_Education,Timestamp
+21.0,3.8,3.7,3.9,5.0,2.0,92.0,30.0,50000.0,Yes,Yes,No,2.5,Year 2,CS,Bachelor,2026-03-07T12:00:00
+19.0,3.5,3.5,3.5,2.0,74.0,80.0,80.0,300000.0,yes,no,no,8.9,year 2,cs,high school,2026-03-07T17:05:04.176171
