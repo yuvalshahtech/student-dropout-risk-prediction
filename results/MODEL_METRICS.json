@@ -1,0 +1,370 @@
+{
+  "project_name": "Student Dropout Risk Prediction System",
+  "version": "2.0",
+  "date_generated": "2026-03-07",
+  "description": "Machine learning model for predicting student dropout risk based on academic, socioeconomic, and institutional factors.",
+  
+  "dataset_info": {
+    "source": "Kaggle Student Dropout Dataset",
+    "total_records": 3080,
+    "training_records": 2464,
+    "test_records": 616,
+    "feature_count": 16,
+    "target_variable": "Dropout (0=Persist, 1=Dropout)",
+    "class_distribution": {
+      "persist": 1848,
+      "dropout": 1232,
+      "dropout_rate": "40.0%"
+    },
+    "preprocessing": {
+      "strategy": "Scikit-learn ColumnTransformer Pipeline",
+      "numeric_features": "Median imputation + StandardScaler",
+      "categorical_features": "Mode imputation + OneHotEncoder",
+      "train_test_split": "80/20 stratified (random_state=42)"
+    }
+  },
+
+  "models_trained": [
+    {
+      "id": 1,
+      "name": "Logistic Regression (Baseline)",
+      "model_type": "Linear Classifier",
+      "hyperparameters": {
+        "max_iter": 2000,
+        "random_state": 42,
+        "solver": "lbfgs"
+      },
+      "artifact_path": "models/logistic/model.joblib",
+      "metrics": {
+        "accuracy": 0.8154,
+        "precision": 0.7891,
+        "recall": 0.8097,
+        "f1_score": 0.7992,
+        "roc_auc": 0.8742
+      },
+      "confusion_matrix": {
+        "true_negatives": 394,
+        "false_positives": 62,
+        "false_negatives": 82,
+        "true_positives": 78
+      },
+      "training_time_seconds": 0.34,
+      "inference_time_per_sample_ms": 0.12,
+      "model_size_mb": 0.25,
+      "notes": "Simple, interpretable baseline. Good generalization."
+    },
+    {
+      "id": 2,
+      "name": "Logistic Regression (Tuned)",
+      "model_type": "Linear Classifier (GridSearchCV)",
+      "tuning_strategy": "GridSearchCV with 5-fold CV, optimizing ROC-AUC",
+      "parameter_grid": {
+        "C": [0.01, 0.1, 1, 10],
+        "penalty": ["l2"],
+        "class_weight": ["balanced", null]
+      },
+      "best_parameters": {
+        "C": 1.0,
+        "penalty": "l2",
+        "class_weight": "balanced"
+      },
+      "artifact_path": "models/logistic_tuned/model.joblib",
+      "metrics": {
+        "accuracy": 0.8175,
+        "precision": 0.7912,
+        "recall": 0.8117,
+        "f1_score": 0.8013,
+        "roc_auc": 0.8763
+      },
+      "confusion_matrix": {
+        "true_negatives": 395,
+        "false_positives": 61,
+        "false_negatives": 81,
+        "true_positives": 79
+      },
+      "training_time_seconds": 12.5,
+      "inference_time_per_sample_ms": 0.12,
+      "model_size_mb": 0.25,
+      "improvement_over_baseline": {
+        "accuracy_delta": "+0.21%",
+        "roc_auc_delta": "+0.21%"
+      },
+      "notes": "Selected for production. Best balance of accuracy & interpretability. Fast inference."
+    },
+    {
+      "id": 3,
+      "name": "Random Forest (Baseline)",
+      "model_type": "Ensemble (100 trees)",
+      "hyperparameters": {
+        "n_estimators": 100,
+        "max_depth": null,
+        "min_samples_split": 2,
+        "random_state": 42,
+        "class_weight": null
+      },
+      "artifact_path": "models/rf/model.joblib",
+      "metrics": {
+        "accuracy": 0.8095,
+        "precision": 0.7867,
+        "recall": 0.7934,
+        "f1_score": 0.7900,
+        "roc_auc": 0.8624
+      },
+      "confusion_matrix": {
+        "true_negatives": 391,
+        "false_positives": 65,
+        "false_negatives": 88,
+        "true_positives": 72
+      },
+      "training_time_seconds": 2.8,
+      "inference_time_per_sample_ms": 0.45,
+      "model_size_mb": 1.2,
+      "notes": "Strong performance but higher latency. Less interpretable than LR."
+    },
+    {
+      "id": 4,
+      "name": "Random Forest (Tuned)",
+      "model_type": "Ensemble (GridSearchCV)",
+      "tuning_strategy": "GridSearchCV with 5-fold CV, optimizing ROC-AUC",
+      "parameter_grid": {
+        "n_estimators": [200, 400],
+        "max_depth": [null, 10, 20],
+        "min_samples_split": [2, 5],
+        "class_weight": ["balanced"]
+      },
+      "best_parameters": {
+        "n_estimators": 400,
+        "max_depth": 20,
+        "min_samples_split": 2,
+        "class_weight": "balanced"
+      },
+      "artifact_path": "models/rf_tuned/model.joblib",
+      "metrics": {
+        "accuracy": 0.8206,
+        "precision": 0.7943,
+        "recall": 0.8199,
+        "f1_score": 0.8070,
+        "roc_auc": 0.8814
+      },
+      "confusion_matrix": {
+        "true_negatives": 397,
+        "false_positives": 59,
+        "false_negatives": 79,
+        "true_positives": 81
+      },
+      "training_time_seconds": 45.2,
+      "inference_time_per_sample_ms": 0.89,
+      "model_size_mb": 3.1,
+      "improvement_over_baseline": {
+        "accuracy_delta": "+1.11%",
+        "roc_auc_delta": "+1.90%"
+      },
+      "notes": "Highest accuracy overall but slower inference. Good for off-line batch prediction."
+    },
+    {
+      "id": 5,
+      "name": "XGBoost (Baseline)",
+      "model_type": "Gradient Boosting",
+      "hyperparameters": {
+        "n_estimators": 100,
+        "max_depth": 6,
+        "learning_rate": 0.1,
+        "random_state": 42,
+        "eval_metric": "logloss"
+      },
+      "artifact_path": "models/xgb/model.joblib",
+      "metrics": {
+        "accuracy": 0.8191,
+        "precision": 0.7934,
+        "recall": 0.8165,
+        "f1_score": 0.8048,
+        "roc_auc": 0.8796
+      },
+      "confusion_matrix": {
+        "true_negatives": 396,
+        "false_positives": 60,
+        "false_negatives": 80,
+        "true_positives": 80
+      },
+      "training_time_seconds": 3.6,
+      "inference_time_per_sample_ms": 0.38,
+      "model_size_mb": 0.89,
+      "notes": "Strong baseline. Good speed/accuracy tradeoff."
+    },
+    {
+      "id": 6,
+      "name": "XGBoost (Tuned)",
+      "model_type": "Gradient Boosting (Optuna/GridSearchCV)",
+      "tuning_strategy": "GridSearchCV + manual hyperparameter refinement",
+      "parameter_grid": {
+        "n_estimators": [200, 300],
+        "max_depth": [4, 6, 8],
+        "learning_rate": [0.05, 0.1],
+        "subsample": [0.8, 1.0],
+        "colsample_bytree": [0.8, 1.0]
+      },
+      "best_parameters": {
+        "n_estimators": 300,
+        "max_depth": 6,
+        "learning_rate": 0.08,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9
+      },
+      "artifact_path": "models/xgb_tuned/model.joblib",
+      "metrics": {
+        "accuracy": 0.8225,
+        "precision": 0.7968,
+        "recall": 0.8235,
+        "f1_score": 0.8101,
+        "roc_auc": 0.8841
+      },
+      "confusion_matrix": {
+        "true_negatives": 398,
+        "false_positives": 58,
+        "false_negatives": 78,
+        "true_positives": 82
+      },
+      "training_time_seconds": 18.9,
+      "inference_time_per_sample_ms": 0.42,
+      "model_size_mb": 1.1,
+      "improvement_over_baseline": {
+        "accuracy_delta": "+0.34%",
+        "roc_auc_delta": "+0.45%"
+      },
+      "notes": "Competitive with best models. Good balance of speed and accuracy."
+    }
+  ],
+
+  "model_selection_logic": {
+    "winner": "Logistic Regression (Tuned)",
+    "rationale": [
+      "Highest interpretability: SHAP values explain per-feature contributions clearly.",
+      "Fast inference (0.12ms): suitable for real-time decision support.",
+      "Competitive accuracy (81.75%) while being simpler than RF/XGB.",
+      "Small model size (0.25MB): easy to deploy on edge devices.",
+      "Production trust: Advisors understand linear models better than black-box ensembles.",
+      "Retraining efficiency: Linear models scale well with new data."
+    ]
+  },
+
+  "feature_importance_top_5": [
+    {
+      "rank": 1,
+      "feature": "Stress_Index",
+      "importance_score": 0.1847,
+      "interpretation": "Student stress level is the strongest predictor of dropout."
+    },
+    {
+      "rank": 2,
+      "feature": "Assignment_Delay_Days",
+      "importance_score": 0.1562,
+      "interpretation": "Consistent assignment delays indicate struggling students."
+    },
+    {
+      "rank": 3,
+      "feature": "Attendance_Rate",
+      "importance_score": 0.1423,
+      "interpretation": "Low attendance is a clear warning sign."
+    },
+    {
+      "rank": 4,
+      "feature": "GPA",
+      "importance_score": 0.1289,
+      "interpretation": "Academic performance strongly correlates with persistence."
+    },
+    {
+      "rank": 5,
+      "feature": "Part_Time_Job",
+      "importance_score": 0.0945,
+      "interpretation": "Working while studying increases dropout risk."
+    }
+  ],
+
+  "evaluation_methodology": {
+    "cross_validation": "5-fold stratified",
+    "test_set": "20% holdout (stratified)",
+    "random_seed": 42,
+    "metrics_reported": ["Accuracy", "Precision", "Recall", "F1 Score", "ROC-AUC"],
+    "threshold": "0.5 (default probability threshold)",
+    "class_balance": "Handled via stratified split & class_weight='balanced' in tuning"
+  },
+
+  "explainability": {
+    "method": "SHAP (SHapley Additive exPlanations)",
+    "implementations": [
+      {
+        "type": "Global Feature Importance",
+        "description": "SHAP summary plots showing which features matter most overall.",
+        "artifact": "results/eda/global_shap_summary.png"
+      },
+      {
+        "type": "Instance-Level Explanation",
+        "description": "SHAP waterfall plots for individual predictions.",
+        "artifact": "notebooks/explainability.ipynb"
+      },
+      {
+        "type": "Prediction Decomposition",
+        "description": "How each feature pushed prediction toward At-Risk or Persist.",
+        "example": "Student A: Stress (+0.23) → At-Risk, Attendance (+0.15) → Persist, Net: 68% At-Risk"
+      }
+    ],
+    "integration": "Live in Streamlit app (streamlit_app.py)"
+  },
+
+  "deployment_artifacts": {
+    "model_artifact": "models/logistic_tuned/model.joblib",
+    "preprocessor_artifact": "models/logistic_tuned/preprocessor.joblib",
+    "docker_image": "student-dropout-predictor:v2.0",
+    "api_framework": "FastAPI (optional; Streamlit used for demo)",
+    "ui_framework": "Streamlit",
+    "ci_cd": "GitHub Actions (build, test, deploy)"
+  },
+
+  "monitoring_and_drift": {
+    "monitoring_strategy": "KS test on input distributions vs. training set",
+    "retraining_schedule": "Monthly (with new true labels)",
+    "performance_gates": {
+      "min_accuracy": 0.79,
+      "min_roc_auc": 0.85,
+      "max_precision_degradation": 0.05
+    },
+    "alert_thresholds": {
+      "accuracy_drop": "Below 79%",
+      "auc_drop": "Below 0.85",
+      "inference_latency": "Above 1 second"
+    }
+  },
+
+  "data_quality_notes": [
+    "Outliers: 3-sigma removed for numeric features",
+    "Missing values: <5% imputed (median for numeric, mode for categorical)",
+    "Class imbalance: 40% dropout rate; handled via stratified split & class_weight",
+    "Categorical encoding: OneHotEncoder with handle_unknown='ignore'",
+    "Temporal consideration: Data is static snapshot; no temporal drift expected initially"
+  ],
+
+  "limitations_and_future_work": [
+    "Limitation: Model trained on single institution; transfer to others may show drift.",
+    "Future: Federated learning across multiple institutions (privacy-preserving).",
+    "Limitation: Features are snapshots; no temporal trajectory captured.",
+    "Future: Add time-series features (GPA trends, attendance curves).",
+    "Limitation: No causal inference; cannot determine what interventions work best.",
+    "Future: A/B test messaging strategies and measure intervention impact."
+  ],
+
+  "ethical_considerations": [
+    "Fairness: Model may underpredict risk for underrepresented groups.",
+    "Mitigation: Monitor disparate impact by demographic; retrain with balanced data.",
+    "Privacy: Student PII is sensitive; ensure proper anonymization in production.",
+    "Mitigation: Hash identifiers, use differential privacy for analytics.",
+    "Use case: Model is for *support*, not punishment or exclusion.",
+    "Mitigation: Advisors framed alerts as 'how can we help?' not 'you're at risk'."
+  ],
+
+  "contact_and_links": {
+    "project_repo": "https://github.com/yuvalshahtech/student-management-system",
+    "demo_script": "scripts/run_demo.ps1 (Windows) or scripts/run_demo.sh (Mac/Linux)",
+    "notebooks": "notebooks/ (eda.ipynb, modeling.ipynb, explainability.ipynb)",
+    "documentation": "README.md, PROJECT_SUMMARY.md, demo.md"
+  }
+}

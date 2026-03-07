@@ -1,49 +1,60 @@
-students = []
+from .core import (
+    collect_student_data,
+    display_and_approve,
+    save_to_cli_data,
+    view_saved_data,
+    validate_choice
+)
 
-# This function is for displaying the menu
-def display():
-    print("1. Add New Student")
-    print("2. View All Students")
-    print("3. Search Student by Name")
-    print("4. Update Student Marks")
-    print("5. Delete Student")
-    print("6. Exit")
+def display_menu():
+    """Display the CLI menu."""
+    print("\n" + "="*60)
+    print("🎓 STUDENT MANAGEMENT SYSTEM - CLI")
+    print("="*60)
+    print("1. ➕  Add New Student (for Dropout Prediction)")
+    print("2. 👀  View All Saved Students")
+    print("3. 🚪  Exit")
+    print("="*60)
 
-
-# Main function (single definition)
 def main():
-    max_choice = 6
-    # import core functions here, only when running main
-    from .core import add_student, view_all, search_student, update_student, delete_student, validate_choice
-
+    """Main CLI loop."""
+    print("\n🎯 Welcome to Student Management System!")
+    print("   Select an option below to get started...")
+    
     while True:
         try:
-            display()
-            choice = int(input("Enter your choice: "))
-            choice = validate_choice(choice, max_choice)
-
+            display_menu()
+            choice = int(input("Enter your choice (1-3): "))
+            choice = validate_choice(choice, 3)
+            
             if choice == 1:
-                add_student(students)
+                # Collect student data
+                data = collect_student_data()
+                
+                if data is not None:
+                    # Show preview and ask for approval
+                    if display_and_approve(data):
+                        # Save to CSV
+                        save_to_cli_data(data)
+                    else:
+                        print("ℹ️  Entry discarded.")
+            
             elif choice == 2:
-                if len(students) == 0:
-                    print("Database is Empty")
-                else:
-                    view_all(students)
+                # View saved data
+                view_saved_data()
+            
             elif choice == 3:
-                search_student(students)
-            elif choice == 4:
-                update_student(students)
-            elif choice == 5:
-                delete_student(students)
-            else:  # choice == 6
-                confirm = input("Are you sure you want to exit? (yes/no): ").lower()
-                if confirm == "yes":
-                    print("Thank You for using Student Manager System")
+                # Exit
+                confirm = input("\nAre you sure you want to exit? (yes/no): ").strip().lower()
+                if confirm in ["yes", "y"]:
+                    print("\n✅ Thank you for using Student Management System!")
+                    print("   Goodbye! 👋\n")
                     break
-
+        
+        except ValueError:
+            print("❌ Please enter a valid number")
         except Exception as e:
-            print(f"Error: {e}")
-
+            print(f"❌ An error occurred: {e}")
 
 # Only run when executed as a script/module
 if __name__ == "__main__":

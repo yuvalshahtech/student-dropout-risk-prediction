@@ -1,88 +1,67 @@
-# =========================
-# Python Cache / Bytecode
-# =========================
+# Python cache / bytecode
 __pycache__/
 *.py[cod]
 *$py.class
 
-# =========================
-# Virtual Environments
-# =========================
+# Virtual environments
 .venv/
 venv/
 env/
 
-# =========================
-# Environment Variables
-# =========================
+# Environment and secrets
 .env
+.env.*
 *.env
 
-# =========================
-# Build / Distribution
-# =========================
+# Build / packaging
 build/
 dist/
 *.egg-info/
 *.egg
 .eggs/
+pip-wheel-metadata/
 
-# =========================
-# IDE / Editor Junk
-# =========================
+# Tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# IDE/editor
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# =========================
-# Testing / Coverage
-# =========================
-.coverage
-.pytest_cache/
-htmlcov/
-
-# =========================
-# Database Files (future SQLite)
-# =========================
-*.db
-*.sqlite3
-
-# =========================
-# Logs
-# =========================
-logs/
+# Logs / temp
 *.log
-
-# =========================
-# Temp / Cache dirs
-# =========================
+logs/
 tmp/
 temp/
 cache/
 
-# =========================
-# Jupyter (future ML modules)
-# =========================
+# Jupyter
 .ipynb_checkpoints/
 
-# =========================
-# JSON / Reports (Auto-generated)
-# =========================
-generated/
-reports/
-exports/
+# OS files
+.DS_Store
+Thumbs.db
 
-# =========================
-# Node (future dashboard)
-# =========================
+# Local databases
+*.db
+*.sqlite3
+
+# ML artifacts and generated outputs
+results/*.png
+results/*.jpg
+results/*.jpeg
+results/*.svg
+
+# Node (if dashboard/frontend is added)
 node_modules/
 npm-debug.log
 yarn-debug.log
 yarn-error.log
-
-# =========================
-# OS Files
-# =========================
-.DS_Store
-Thumbs.db
