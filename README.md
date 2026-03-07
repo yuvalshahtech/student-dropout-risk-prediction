@@ -8,7 +8,7 @@
 
 **[Try the Live Demo →](https://student-management-system-dropout-prediction.streamlit.app)**
 
-[Streamlit Demo](assets/streamlit_demo.webm)
+[Streamlit Demo](assets/streamlit_demo.gif)
 
 ---
 
