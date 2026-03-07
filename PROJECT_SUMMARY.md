@@ -153,10 +153,12 @@
 ## Contact / Questions
 
 For questions, feedback, or collaboration:
+- **Live Demo:** [student-management-system-dropout-prediction.streamlit.app](https://student-management-system-dropout-prediction.streamlit.app)
 - **GitHub:** [yuvalshahtech/student-management-system](https://github.com/yuvalshahtech/student-management-system)
-- **Demo:** `.\scripts\run_demo.ps1` (Windows) or `bash scripts/run_demo.sh` (Mac/Linux)
+- **Run locally:** `.\scripts\run_demo.ps1` (Windows) or `bash scripts/run_demo.sh` (Mac/Linux)
 
 ---
 
 **Version:** 2.0 (March 2026)  
-**Status:** Showcase-Ready Portfolio Project
+**Status:** Showcase-Ready Portfolio Project  
+**Live Demo:** https://student-management-system-dropout-prediction.streamlit.app

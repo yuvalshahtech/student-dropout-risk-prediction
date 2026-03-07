@@ -7,19 +7,24 @@ This guide walks you through the **Student Dropout Risk Predictor** — an AI/ML
 
 ## ⚡ Quick Start (30 seconds)
 
-### Windows PowerShell:
+### Try the deployed app (no setup needed):
+**https://student-management-system-dropout-prediction.streamlit.app**
+
+### Or run locally:
+
+#### Windows PowerShell:
 ```powershell
 .\scripts\run_demo.ps1
 ```
 
-### macOS/Linux (Bash):
+#### macOS/Linux (Bash):
 ```bash
 source .venv/bin/activate
 pip install -r requirements.txt
 streamlit run streamlit_app.py
 ```
 
-The app will open automatically at **http://localhost:8501**
+The local app will open automatically at **http://localhost:8501**
 
 ---
 

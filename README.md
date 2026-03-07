@@ -1,6 +1,14 @@
 # Student Management System (AI/ML Showcase)
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://student-management-system-dropout-prediction.streamlit.app)
+
 An interview-ready portfolio project for student dropout risk prediction using machine learning, explainability, and a Streamlit demo app.
+
+## Live Demo
+
+Try the deployed app — no setup required:
+
+**https://student-management-system-dropout-prediction.streamlit.app**
 
 ## What This Project Demonstrates
 
@@ -128,4 +136,5 @@ pre-commit run --all-files
 ## Author
 
 Yuval Shah  
-GitHub: `@yuvalshahtech`
+GitHub: `@yuvalshahtech`  
+Live Demo: https://student-management-system-dropout-prediction.streamlit.app
