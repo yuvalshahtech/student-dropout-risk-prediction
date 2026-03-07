@@ -114,7 +114,7 @@ The Streamlit app delivers a complete prediction flow:
 3. View the SHAP breakdown showing which features drove the result
 4. Submit feedback for retraining
 
-![Prediction Flow](assets/streamlit_demo.gif) -->
+![Prediction Flow](assets/streamlit_demo.gif)
 
 An optional CLI is also available for bulk data entry: `python -m student_management`
 
