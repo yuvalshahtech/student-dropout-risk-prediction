@@ -73,8 +73,7 @@ Detailed metrics, confusion matrices, and feature importance: [`results/MODEL_ME
 | **Modular code** | Clean Python package — `features.py`, `training.py`, `evaluate.py` |
 | **Responsible AI** | Built to identify students for support, not exclusion — bias monitoring included |
 
-<!-- TODO: Replace with actual screenshot of SHAP waterfall plot -->
-<!-- ![SHAP Explanation](assets/shap_waterfall.png) -->
+![SHAP Explanation](assets/shap_waterfall.png)
 
 ---
 
@@ -115,8 +114,7 @@ The Streamlit app delivers a complete prediction flow:
 3. View the SHAP breakdown showing which features drove the result
 4. Submit feedback for retraining
 
-<!-- TODO: Replace with actual GIF of prediction flow -->
-<!-- ![Prediction Flow](assets/prediction_flow.gif) -->
+![Prediction Flow](assets/streamlit_demo.gif) -->
 
 An optional CLI is also available for bulk data entry: `python -m student_management`
 
