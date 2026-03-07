@@ -1,22 +1,23 @@
 # Core ML/Data
-numpy
-pandas
-scikit-learn
-joblib
-xgboost
-shap
+numpy==2.4.2
+pandas==3.0.1
+scikit-learn==1.8.0
+joblib==1.3.2
+xgboost==3.2.0
+shap==0.44.1
 
 # Visualization and notebooks
-matplotlib
-seaborn
-jupyter
+matplotlib==3.9.0
+seaborn==0.13.2
+jupyter==1.0.0
 
 # App / serving
-streamlit
+streamlit==1.19.0
+altair==4.2.2
 
 # Dev / quality
-pytest
-black
-isort
-flake8
-pre-commit
+pytest==7.4.0
+black==24.10.0
+isort==5.13.2
+flake8==7.1.1
+pre-commit==3.6.0
