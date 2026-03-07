@@ -1,0 +1,2 @@
+Age,Family_Income,Internet_Access,Study_Hours_per_Day,Attendance_Rate,Assignment_Delay_Days,Travel_Time_Minutes,Part_Time_Job,Scholarship,Stress_Index,GPA,Semester_GPA,CGPA,Semester,Department,Parental_Education,Prediction,Correct_Label,Probability,Timestamp
+19.0,300000.0,1,4.0,89,0.0,80.0,0,0,8.7,3.78,3.2,3.9,Year 2,CS,HighSchool,0,0,94.58,2026-03-07 12:49:48.252053
