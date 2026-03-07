@@ -1,4 +1,4 @@
 """Student Management System package metadata."""
 
 __all__ = ["__version__"]
-__version__ = "1.6.0"
+__version__ = "2.0.0"

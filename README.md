@@ -8,8 +8,7 @@
 
 **[Try the Live Demo →](https://student-management-system-dropout-prediction.streamlit.app)**
 
-<!-- TODO: Replace with actual GIF/screenshot of the Streamlit app -->
-<!-- ![Streamlit Demo](assets/streamlit_demo.gif) -->
+[Streamlit Demo](assets/streamlit_demo.webm)
 
 ---
 
@@ -191,6 +190,6 @@ pytest tests/ -q                                                                
 
 ---
 
-**Built by [Yuval Shah](https://github.com/yuvalshahtech)** · v1.6.0 · [Live Demo →](https://student-management-system-dropout-prediction.streamlit.app)
+**Built by [Yuval Shah](https://github.com/yuvalshahtech)** · v2.0.0 · [Live Demo →](https://student-management-system-dropout-prediction.streamlit.app)
 
 *Building end-to-end ML systems — from data pipelines to deployed products.*
