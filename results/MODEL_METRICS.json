@@ -365,6 +365,6 @@
     "project_repo": "https://github.com/yuvalshahtech/student-management-system",
     "demo_script": "scripts/run_demo.ps1 (Windows) or scripts/run_demo.sh (Mac/Linux)",
     "notebooks": "notebooks/ (eda.ipynb, modeling.ipynb, explainability.ipynb)",
-    "documentation": "README.md, PROJECT_SUMMARY.md, demo.md"
+    "documentation": "README.md"
   }
 }
