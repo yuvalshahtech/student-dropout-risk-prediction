@@ -77,7 +77,7 @@ class TestTrainingPipeline:
             assert X.shape[1] > 0, "Expected features to be extracted"
             assert y is not None, "Expected target variable"
             assert preprocessor is not None, "Expected preprocessor pipeline"
-            print(f"✅ Features built: X shape = {X.shape}, y shape = {y.shape}")
+            print(f"[PASS] Features built: X shape = {X.shape}, y shape = {y.shape}")
         except Exception as e:
             pytest.fail(f"Feature building failed: {e}")
 
@@ -100,12 +100,12 @@ class TestTrainingPipeline:
             # Check that model was saved
             model_path = os.path.join(out_dir, "logistic", "model.joblib")
             assert os.path.exists(model_path), f"Model not found at {model_path}"
-            print(f"✅ Logistic Regression model saved: {model_path}")
+            print(f"[PASS] Logistic Regression model saved: {model_path}")
 
             # Test model loading
             pipeline = joblib.load(model_path)
             assert pipeline is not None, "Failed to load model"
-            print(f"✅ Model loaded successfully")
+            print("[PASS] Model loaded successfully")
 
         except Exception as e:
             pytest.fail(f"Logistic regression training failed: {e}")
@@ -129,7 +129,7 @@ class TestTrainingPipeline:
             # Check that model was saved
             model_path = os.path.join(out_dir, "rf", "model.joblib")
             assert os.path.exists(model_path), f"Model not found at {model_path}"
-            print(f"✅ Random Forest model saved: {model_path}")
+            print(f"[PASS] Random Forest model saved: {model_path}")
 
         except Exception as e:
             pytest.fail(f"Random Forest training failed: {e}")
@@ -168,8 +168,8 @@ class TestTrainingPipeline:
             assert probabilities.shape == (5, 2), "Expected 5 probability pairs"
             assert np.all((predictions == 0) | (predictions == 1)), "Predictions must be 0 or 1"
             assert np.all((probabilities >= 0) & (probabilities <= 1)), "Probabilities must be [0, 1]"
-            print(f"✅ Predictions working: {predictions}")
-            print(f"✅ Probabilities working: {probabilities[0]}")
+            print(f"[PASS] Predictions working: {predictions}")
+            print(f"[PASS] Probabilities working: {probabilities[0]}")
 
         except Exception as e:
             pytest.fail(f"Prediction test failed: {e}")
@@ -185,7 +185,7 @@ class TestTrainingPipeline:
             X_transformed = preprocessor.fit_transform(X)
             assert X_transformed.shape[0] == 50, "Expected 50 samples after transform"
             assert np.all(np.isfinite(X_transformed)), "Expected no NaN or inf values"
-            print(f"✅ Preprocessing pipeline working: output shape = {X_transformed.shape}")
+            print(f"[PASS] Preprocessing pipeline working: output shape = {X_transformed.shape}")
 
         except Exception as e:
             pytest.fail(f"Preprocessing test failed: {e}")
@@ -211,7 +211,7 @@ class TestTrainingPipeline:
             assert os.path.exists(os.path.join(model_dir, "model.joblib"))
             assert os.path.exists(os.path.join(model_dir, "test_data.joblib"))
 
-            print(f"✅ All artifacts persisted correctly in {model_dir}")
+            print(f"[PASS] All artifacts persisted correctly in {model_dir}")
 
         except Exception as e:
             pytest.fail(f"Persistence test failed: {e}")
@@ -229,7 +229,7 @@ class TestTrainingPipeline:
             assert 1 in y.values, "Expected class 1 (dropout) in data"
 
             class_dist = y.value_counts()
-            print(f"✅ Class distribution: {dict(class_dist)}")
+            print(f"[PASS] Class distribution: {dict(class_dist)}")
 
         except Exception as e:
             pytest.fail(f"Stratified split test failed: {e}")

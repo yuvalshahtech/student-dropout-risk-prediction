@@ -1,5 +1,5 @@
 # ============================================================
-# Student Management System - AI/ML Demo Runner
+# Student Dropout Risk Prediction - AI/ML Demo Runner
 # ============================================================
 
 $ErrorActionPreference = "Stop"
@@ -7,7 +7,7 @@ $ErrorActionPreference = "Stop"
 Clear-Host
 
 Write-Host "============================================================" -ForegroundColor Cyan
-Write-Host "Student Management System - AI/ML Demo Launcher" -ForegroundColor Cyan
+Write-Host "Student Dropout Risk Prediction - AI/ML Demo Launcher" -ForegroundColor Cyan
 Write-Host "============================================================" -ForegroundColor Cyan
 Write-Host ""
 

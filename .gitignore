@@ -49,6 +49,11 @@ cache/
 # OS files
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# Feedback data (user-generated at runtime)
+data/feedback_data.csv
+data/cli_data.csv
 
 # Local databases
 *.db

@@ -1,3 +1,5 @@
+from colorama import init, Fore, Style
+
 from .core import (
     collect_student_data,
     display_and_approve,
@@ -6,25 +8,38 @@ from .core import (
     validate_choice
 )
 
+init(autoreset=True)
+
+# Terminal icon set (ASCII-safe, CI-compatible)
+ICO_OK = f"{Fore.GREEN}{Style.BRIGHT}[*]{Style.RESET_ALL}"
+ICO_ERR = f"{Fore.RED}{Style.BRIGHT}[x]{Style.RESET_ALL}"
+ICO_INFO = f"{Fore.CYAN}{Style.BRIGHT}[i]{Style.RESET_ALL}"
+ICO_WARN = f"{Fore.YELLOW}{Style.BRIGHT}[!]{Style.RESET_ALL}"
+ICO_ADD = f"{Fore.GREEN}{Style.BRIGHT}[+]{Style.RESET_ALL}"
+ICO_VIEW = f"{Fore.CYAN}{Style.BRIGHT}[>]{Style.RESET_ALL}"
+ICO_EXIT = f"{Fore.YELLOW}{Style.BRIGHT}[-]{Style.RESET_ALL}"
+ICO_APP = f"{Fore.CYAN}{Style.BRIGHT}[#]{Style.RESET_ALL}"
+
+
 def display_menu():
     """Display the CLI menu."""
     print("\n" + "="*60)
-    print("🎓 STUDENT MANAGEMENT SYSTEM - CLI")
+    print(f"  {ICO_APP} {Fore.CYAN}{Style.BRIGHT}STUDENT DROPOUT RISK PREDICTION{Style.RESET_ALL}")
     print("="*60)
-    print("1. ➕  Add New Student (for Dropout Prediction)")
-    print("2. 👀  View All Saved Students")
-    print("3. 🚪  Exit")
+    print(f"  1. {ICO_ADD}  Add New Student (for Dropout Prediction)")
+    print(f"  2. {ICO_VIEW}  View All Saved Students")
+    print(f"  3. {ICO_EXIT}  Exit")
     print("="*60)
 
 def main():
     """Main CLI loop."""
-    print("\n🎯 Welcome to Student Management System!")
-    print("   Select an option below to get started...")
+    print(f"\n  {ICO_APP} {Fore.CYAN}{Style.BRIGHT}Welcome to Student Dropout Risk Prediction{Style.RESET_ALL}")
+    print("      Select an option below to get started...")
     
     while True:
         try:
             display_menu()
-            choice = int(input("Enter your choice (1-3): "))
+            choice = int(input("  Enter your choice (1-3): "))
             choice = validate_choice(choice, 3)
             
             if choice == 1:
@@ -37,7 +52,7 @@ def main():
                         # Save to CSV
                         save_to_cli_data(data)
                     else:
-                        print("ℹ️  Entry discarded.")
+                        print(f"  {ICO_INFO} Entry discarded.")
             
             elif choice == 2:
                 # View saved data
@@ -45,16 +60,16 @@ def main():
             
             elif choice == 3:
                 # Exit
-                confirm = input("\nAre you sure you want to exit? (yes/no): ").strip().lower()
+                confirm = input("\n  Are you sure you want to exit? (yes/no): ").strip().lower()
                 if confirm in ["yes", "y"]:
-                    print("\n✅ Thank you for using Student Management System!")
-                    print("   Goodbye! 👋\n")
+                    print(f"\n  {ICO_OK} Thank you for using Student Dropout Risk Prediction!")
+                    print("      Goodbye!\n")
                     break
         
         except ValueError:
-            print("❌ Please enter a valid number")
+            print(f"  {ICO_ERR} Please enter a valid number")
         except Exception as e:
-            print(f"❌ An error occurred: {e}")
+            print(f"  {ICO_ERR} An error occurred: {e}")
 
 # Only run when executed as a script/module
 if __name__ == "__main__":

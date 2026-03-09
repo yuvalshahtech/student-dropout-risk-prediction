@@ -1,12 +1,14 @@
 # Student Dropout Risk Prediction
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://student-management-system-dropout-prediction.streamlit.app)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://student-dropout-risk-prediction-yuvalshahtech.streamlit.app)
 [![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-Pipeline-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org)
 
 > A deployed ML system that predicts student dropout risk, explains every prediction with SHAP, and serves results through a live Streamlit app.
 
-**[Try the Live Demo →](https://student-management-system-dropout-prediction.streamlit.app)**
+**[Try the Live Demo →](https://student-dropout-risk-prediction-yuvalshahtech.streamlit.app)**
+
+![Project Poster](student-dropout-risk-prediction-v2.png)
 
 ![Streamlit Demo](assets/streamlit_demo.gif)
 
@@ -24,7 +26,7 @@ A fully deployed ML system — not just a model — that predicts dropout risk f
 |---|---|
 | **Data** | 10,000+ student records across academic, socioeconomic, and institutional dimensions |
 | **Accuracy** | 82% on held-out test data with ROC-AUC of 0.88 |
-| **Deployment** | [Live Streamlit app](https://student-management-system-dropout-prediction.streamlit.app) — interactive predictions + SHAP explanations |
+| **Deployment** | [Live Streamlit app](https://student-dropout-risk-prediction-yuvalshahtech.streamlit.app) — interactive predictions + SHAP explanations |
 | **Stack** | scikit-learn · XGBoost · SHAP · Streamlit · pytest |
 
 ---
@@ -122,14 +124,24 @@ An optional CLI is also available for bulk data entry: `python -m student_manage
 
 ## Quick Start
 
+### Clone & develop locally
+
 ```powershell
+git clone https://github.com/yuvalshahtech/student-dropout-risk-prediction.git
+cd student-dropout-risk-prediction
+
 python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
+.\.\.venv\Scripts\Activate.ps1
+pip install -r requirements-dev.txt    # installs runtime + CLI + testing + code quality
 
 python -m student_management.training   # train models
 streamlit run streamlit_app.py          # launch app
+pytest tests/ -q                        # run tests
 ```
+
+> **Note:** `requirements.txt` is used by Streamlit Cloud for deployment.
+> For local development always use `requirements-dev.txt` — it pulls in
+> `requirements.txt` automatically plus testing, linting, CLI, and notebook deps.
 
 Helper script: `.\scripts\run_demo.ps1`
 
@@ -138,7 +150,7 @@ Helper script: `.\scripts\run_demo.ps1`
 ## Project Structure
 
 ```text
-student-management-system/
+student-dropout-risk-prediction/
 ├── student_management/        # Core ML package
 │   ├── features.py            # Preprocessing pipeline
 │   ├── training.py            # Model training & tuning
@@ -165,6 +177,13 @@ python -c "from student_management.evaluate import evaluate_model; evaluate_mode
 pytest tests/ -q                                                                                        # test
 ```
 
+### Requirements files
+
+| File | Purpose | When to use |
+|------|---------|-------------|
+| `requirements.txt` | Streamlit Cloud deployment | Automatically used by Streamlit Cloud |
+| `requirements-dev.txt` | Local development | `pip install -r requirements-dev.txt` after cloning |
+
 ---
 
 ## Roadmap
@@ -188,6 +207,6 @@ pytest tests/ -q                                                                
 
 ---
 
-**Built by [Yuval Shah](https://github.com/yuvalshahtech)** · v2.0.0 · [Live Demo →](https://student-management-system-dropout-prediction.streamlit.app)
+**Built by [Yuval Shah](https://github.com/yuvalshahtech)** · v2.0.0 · [Live Demo →](https://student-dropout-risk-prediction-yuvalshahtech.streamlit.app)
 
 *Building end-to-end ML systems — from data pipelines to deployed products.*

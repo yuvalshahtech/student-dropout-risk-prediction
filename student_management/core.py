@@ -1,6 +1,16 @@
 import pandas as pd
 import os
 from datetime import datetime
+from colorama import Fore, Style
+
+# Terminal icon set (ASCII-safe, CI-compatible)
+ICO_OK = f"{Fore.GREEN}{Style.BRIGHT}[*]{Style.RESET_ALL}"
+ICO_ERR = f"{Fore.RED}{Style.BRIGHT}[x]{Style.RESET_ALL}"
+ICO_INFO = f"{Fore.CYAN}{Style.BRIGHT}[i]{Style.RESET_ALL}"
+ICO_WARN = f"{Fore.YELLOW}{Style.BRIGHT}[!]{Style.RESET_ALL}"
+ICO_SEC = f"{Fore.CYAN}{Style.BRIGHT}>>>{Style.RESET_ALL}"
+ICO_DATA = f"{Fore.MAGENTA}{Style.BRIGHT}[=]{Style.RESET_ALL}"
+ICO_SAVE = f"{Fore.GREEN}{Style.BRIGHT}[>]{Style.RESET_ALL}"
 
 # === Custom Exceptions ===
 class InvalidAgeError(Exception):
@@ -106,15 +116,16 @@ def validate_select(value, valid_options, field_name="Option"):
 def collect_student_data():
     """Collect student data interactively (matching Streamlit fields)."""
     print("\n" + "="*60)
-    print("📋 STUDENT DROPOUT RISK PREDICTION - DATA ENTRY")
+    print(f"  {ICO_DATA} {Fore.CYAN}{Style.BRIGHT}STUDENT DROPOUT RISK PREDICTION{Style.RESET_ALL}")
+    print(f"      {ICO_INFO} Interactive Data Entry")
     print("="*60)
     
     data = {}
     
     try:
         # === ACADEMIC TAB ===
-        print("\n📘 ACADEMIC INFORMATION")
-        print("-" * 40)
+        print(f"\n  {ICO_SEC} {Fore.CYAN}{Style.BRIGHT}ACADEMIC INFORMATION{Style.RESET_ALL}")
+        print("  " + "-" * 40)
         data["Age"] = validate_age(input("Enter Age (15-80): "))
         data["GPA"] = validate_gpa(input("Enter GPA (0-4.0): "))
         data["CGPA"] = validate_gpa(input("Enter CGPA (0-4.0): "))
@@ -133,8 +144,8 @@ def collect_student_data():
         )
         
         # === ENVIRONMENT TAB ===
-        print("\n🌍 ENVIRONMENTAL & SOCIOECONOMIC INFORMATION")
-        print("-" * 40)
+        print(f"\n  {ICO_SEC} {Fore.CYAN}{Style.BRIGHT}ENVIRONMENTAL & SOCIOECONOMIC INFORMATION{Style.RESET_ALL}")
+        print("  " + "-" * 40)
         data["Family_Income"] = validate_positive_number(
             input("Enter Family Income: "), "Family Income"
         )
@@ -158,8 +169,8 @@ def collect_student_data():
         )
         
         # === INSTITUTION TAB ===
-        print("\n🏫 INSTITUTIONAL INFORMATION")
-        print("-" * 40)
+        print(f"\n  {ICO_SEC} {Fore.CYAN}{Style.BRIGHT}INSTITUTIONAL INFORMATION{Style.RESET_ALL}")
+        print("  " + "-" * 40)
         data["Semester"] = validate_select(
             input("Select Semester (Year 1/Year 2/Year 3/Year 4): "),
             ["Year 1", "Year 2", "Year 3", "Year 4"],
@@ -182,7 +193,7 @@ def collect_student_data():
         
     except (InvalidAgeError, InvalidGPAError, InvalidRangeError, InvalidStressIndexError,
             InvalidPercentageError, InvalidChoiceError, InvalidInputError) as e:
-        print(f"\n❌ Error: {e}")
+        print(f"\n  {ICO_ERR} Error: {e}")
         return None
 
 # === Display & Approval Function ===
@@ -192,7 +203,7 @@ def display_and_approve(data):
         return False
     
     print("\n" + "="*60)
-    print("📊 REVIEW YOUR DATA")
+    print(f"  {ICO_DATA} {Fore.CYAN}{Style.BRIGHT}REVIEW YOUR DATA{Style.RESET_ALL}")
     print("="*60)
     
     for key, value in data.items():
@@ -206,10 +217,10 @@ def display_and_approve(data):
         if confirm in ["yes", "y"]:
             return True
         elif confirm in ["no", "n"]:
-            print("❌ Data entry cancelled.")
+            print(f"  {ICO_WARN} Data entry cancelled.")
             return False
         else:
-            print("⚠️  Please enter 'yes' or 'no'")
+            print(f"  {ICO_WARN} Please enter 'yes' or 'no'")
 
 # === CSV Management Function ===
 def save_to_cli_data(data):
@@ -232,7 +243,7 @@ def save_to_cli_data(data):
     
     # Save to CSV
     df.to_csv(csv_path, index=False)
-    print(f"✅ Data saved to {csv_path}")
+    print(f"  {ICO_SAVE} Data saved to {csv_path}")
     return True
 
 # === View Saved Data Function ===
@@ -241,12 +252,12 @@ def view_saved_data():
     csv_path = os.path.join(os.path.dirname(__file__), "..", "data", "cli_data.csv")
     
     if not os.path.exists(csv_path):
-        print("❌ No saved data found.")
+        print(f"  {ICO_WARN} No saved data found.")
         return
     
     df = pd.read_csv(csv_path)
     print("\n" + "="*60)
-    print(f"📊 SAVED DATA ({len(df)} records)")
+    print(f"  {ICO_DATA} {Fore.CYAN}{Style.BRIGHT}SAVED DATA ({len(df)} records){Style.RESET_ALL}")
     print("="*60)
     print(df.to_string(index=False))
     print("="*60)

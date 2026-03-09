@@ -1,7 +1,19 @@
+# ---------------------------------------------------------------
+# requirements-dev.txt  --  Local development (clone from GitHub)
+# Installs everything: runtime + CLI + testing + code quality
+# Usage:  pip install -r requirements-dev.txt
+# ---------------------------------------------------------------
+
+# Pull in all Streamlit / runtime dependencies
 -r requirements.txt
 
-# Development / testing / code quality
+# CLI
+colorama==0.4.6
+
+# Testing
 pytest==7.4.0
+
+# Code quality
 black==24.10.0
 isort==5.13.2
 flake8==7.1.1
